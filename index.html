@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJI Mavic 4 Pro Official Store - 20% OFF Limited Offer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Inter:wght@300;400;900&display=swap');
+        
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #030303; color: #fff; scroll-behavior: smooth; overflow-x: hidden; }
+        .hero-bg-gradient { background: linear-gradient(180deg, rgba(3,3,3,0.1) 0%, rgba(3,3,3,0.8) 50%, rgba(3,3,3,1) 90%); }
+        .feature-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.4s ease; }
+        .feature-card:hover { background: rgba(255, 255, 255, 0.08); transform: translateY(-5px); border-color: #3b82f6; }
+        .lang-content { display: none; }
+        .lang-active { display: block; }
+        .slide-up { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .slide-up.visible { opacity: 1; transform: translateY(0); }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            z-index: 9999;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-btn:hover { transform: scale(1.1); background: #128c7e; }
+        
+        .promo-pill { background: linear-gradient(90deg, #3b82f6, #8b5cf6); }
+        .pricing-card { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .pricing-card.highlight { border: 2px solid #3b82f6; transform: scale(1.05); box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2); }
+        
+        .countdown-box { 
+            background: rgba(255, 255, 255, 0.05); 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            min-width: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href=" " class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp text-white"></i>
+    </a >
+
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-10">
+                <a href="#" class="text-3xl font-black tracking-tighter italic">DJI</a >
+                <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-400">
+                    <a href="#features" class="hover:text-white transition">Features</a >
+                    <a href="#pricing" class="hover:text-white transition">Pricing</a >
+                    <a href="#specs" class="hover:text-white transition">Specs</a >
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <select id="langSelector" class="bg-white/10 border-none text-[11px] rounded-full px-4 py-2 outline-none cursor-pointer text-white">
+                    <option value="zh" class="text-black">繁體中文</option>
+                    <option value="en" class="text-black">English</option>
+                    <option value="jp" class="text-black">日本語</option>
+                </select>
+                <a href="https://wa.me/12135487424" class="bg-blue-600 text-white px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest hover:bg-blue-500 transition shadow-lg">
+                    Contact Us
+                </a >
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            < img src="https://image.pollinations.ai/prompt/Cinematic_close_up_of_DJI_Mavic_4_drone_flying_over_mountains_at_sunrise_ultra_realistic_lifestyle_photography?width=2000&height=1200&seed=99" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-bg-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 px-6 max-w-5xl slide-up">
+            <div class="inline-flex items-center gap-3 px-6 py-2 rounded-full promo-pill text-white text-[10px] font-black tracking-[0.3em] mb-8">
+                <i class="fas fa-bolt"></i> LIMITED 20% OFF DEAL
+            </div>
+            <h1 class="text-6xl md:text-[100px] font-black mb-6 tracking-tighter leading-none italic uppercase">Mavic 4 Pro</h1>
+            <p class="text-lg md:text-2xl font-light text-gray-300 max-w-2xl mx-auto mb-12">
+                <span class="lang-zh lang-content lang-active">雙 1 英寸哈蘇傳感器，極致畫質，現以官網 8 折起。</span>
+                <span class="lang-en lang-content">Dual 1-inch Hasselblad sensors. Pro-grade imaging. Now starting at 20% OFF.</span>
+            </p >
+            
+            <div class="flex justify-center gap-4 mb-12">
+                <div class="countdown-box"><div id="days" class="text-3xl font-black">07</div><div class="text-[9px] text-gray-500 uppercase mt-1">Days</div></div>
+                <div class="countdown-box"><div id="hours" class="text-3xl font-black">00</div><div class="text-[9px] text-gray-500 uppercase mt-1">Hours</div></div>
+                <div class="countdown-box"><div id="mins" class="text-3xl font-black">00</div><div class="text-[9px] text-gray-500 uppercase mt-1">Mins</div></div>
+                <div class="countdown-box"><div id="secs" class="text-3xl font-black text-blue-500">00</div><div class="text-[9px] text-gray-500 uppercase mt-1">Secs</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white text-black">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div><i class="fas fa-shipping-fast text-2xl mb-2 text-blue-600"></i><p class="text-[11px] font-bold uppercase tracking-widest">Free Global Shipping</p ></div>
+            <div><i class="fas fa-shield-alt text-2xl mb-2 text-blue-600"></i><p class="text-[11px] font-bold uppercase tracking-widest">2-Year Official Warranty</p ></div>
+            <div><i class="fas fa-undo text-2xl mb-2 text-blue-600"></i><p class="text-[11px] font-bold uppercase tracking-widest">30-Day Money Back</p ></div>
+            <div><i class="fas fa-headset text-2xl mb-2 text-blue-600"></i><p class="text-[11px] font-bold uppercase tracking-widest">24/7 WhatsApp Support</p ></div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-32 px-6 bg-zinc-950">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 slide-up">
+                <h2 class="text-5xl font-black italic mb-4 uppercase">Special Offer</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="pricing-card p-10 rounded-[40px] flex flex-col slide-up stagger-delay-1">
+                    <h3 class="text-lg font-bold mb-8 text-gray-400 uppercase tracking-widest italic">Standard Combo</h3>
+                    <div class="mb-10">
+                        <span class="text-gray-600 line-through text-lg block font-mono">$1,599</span>
+                        <span class="text-5xl font-black">$1,279</span>
+                    </div>
+                    <ul class="space-y-4 mb-10 text-sm text-gray-400 flex-grow">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> DJI Mavic 4 Pro Drone</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> RC-N3 Controller</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> 1x Intelligent Battery</li>
+                    </ul>
+                    <a href="https://wa.me/12135487424?text=Hi, I want to order the Standard Combo at $1,279" class="w-full py-4 rounded-2xl bg-white/10 text-white text-center font-bold text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Buy via WhatsApp
+                    </a >
+                </div>
+
+                <div class="pricing-card p-10 rounded-[40px] flex flex-col highlight slide-up stagger-delay-2 relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[9px] font-black px-6 py-1.5 rounded-full uppercase">Most Popular</div>
+                    <h3 class="text-lg font-bold mb-8 text-blue-400 uppercase tracking-widest italic">Fly More Combo</h3>
+                    <div class="mb-10">
+                        <span class="text-gray-600 line-through text-lg block font-mono">$2,199</span>
+                        <span class="text-5xl font-black text-blue-500">$1,759</span>
+                    </div>
+                    <ul class="space-y-4 mb-10 text-sm text-gray-200 flex-grow">
+                        <li><i class="fas fa-plus text-blue-500 mr-2"></i> 3x Flight Batteries</li>
+                        <li><i class="fas fa-plus text-blue-500 mr-2"></i> Battery Charging Hub</li>
+                        <li><i class="fas fa-plus text-blue-500 mr-2"></i> Pro Shoulder Bag</li>
+                    </ul>
+                    <a href="https://wa.me/12135487424?text=Hi, I want the Fly More Combo deal for $1,759" class="w-full py-4 rounded-2xl bg-blue-600 text-white text-center font-bold text-[11px] uppercase tracking-[0.2em] hover:bg-blue-500 transition shadow-xl flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Get 20% Off Now
+                    </a >
+                </div>
+
+                <div class="pricing-card p-10 rounded-[40px] flex flex-col slide-up stagger-delay-3">
+                    <h3 class="text-lg font-bold mb-8 text-gray-400 uppercase tracking-widest italic">Cine Premium</h3>
+                    <div class="mb-10">
+                        <span class="text-gray-600 line-through text-lg block font-mono">$4,799</span>
+                        <span class="text-5xl font-black">$3,839</span>
+                    </div>
+                    <ul class="space-y-4 mb-10 text-sm text-gray-400 flex-grow">
+                        <li><i class="fas fa-video text-blue-500 mr-2"></i> Apple ProRes Support</li>
+                        <li><i class="fas fa-hdd text-blue-500 mr-2"></i> Built-in 1TB SSD</li>
+                        <li><i class="fas fa-tablet-alt text-blue-500 mr-2"></i> DJI RC Pro 2 Controller</li>
+                    </ul>
+                    <a href="https://wa.me/12135487424?text=Hi, I am interested in the Cine Premium Combo at $3,839" class="w-full py-4 rounded-2xl bg-white/10 text-white text-center font-bold text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Contact Expert
+                    </a >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-white/5 bg-black">
+        <div class="text-3xl font-black italic mb-8">DJI</div>
+        <p class="text-gray-500 text-[10px] uppercase tracking-[0.5em] mb-10">Official Authorized Global Store</p >
+        <div class="flex justify-center gap-10 text-gray-500 text-xl">
+            <a href="https://wa.me/12135487424" class="hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a >
+            <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a >
+            <a href="#" class="hover:text-white transition"><i class="fab fa-youtube"></i></a >
+        </div>
+        <p class="mt-12 text-[9px] text-gray-800 uppercase tracking-widest">© 2026 DJI Global. Limited Time Campaign.</p >
+    </footer>
+
+    <script>
+        // Language Toggle
+        const langSelector = document.getElementById('langSelector');
+        langSelector.addEventListener('change', (e) => {
+            const selectedLang = e.target.value;
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('lang-active');
+                if (content.classList.contains(`lang-${selectedLang}`)) content.classList.add('lang-active');
+            });
+        });
+
+        // Scroll Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
+
+        // Real-time Countdown
+        const targetDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000);
+        setInterval(() => {
+            const now = new Date().getTime();
+            const d = targetDate - now;
+            document.getElementById('days').innerText = Math.floor(d / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+            document.getElementById('hours').innerText = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+            document.getElementById('mins').innerText = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+            document.getElementById('secs').innerText = Math.floor((d % (1000 * 60)) / 1000).toString().padStart(2, '0');
+        }, 1000);
+    </script>
+</body>
+</html>
